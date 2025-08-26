@@ -1,8 +1,8 @@
 package com.michaleq44.michaleqmod;
 
-import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -12,15 +12,22 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.event.FMLServerStartingEvent;
+import cpw.mods.fml.common.registry.GameRegistry;
 
 @Mod(modid = MyMod.MODID, version = Tags.VERSION, name = "MichaleqMod", acceptedMinecraftVersions = "[1.7.10]")
 public class MyMod {
 
     public static final String MODID = "michaleqmod";
-    public static final Logger LOG = LogManager.getLogger(MODID);
+    public static Logger LOG = null;
 
-    @SidedProxy(clientSide = "com.michaleq44.michaleqmod.ClientProxy", serverSide = "com.michaleq44.michaleqmod.CommonProxy")
+    @SidedProxy(
+        clientSide = "com.michaleq44.michaleqmod.ClientProxy",
+        serverSide = "com.michaleq44.michaleqmod.CommonProxy")
     public static CommonProxy proxy;
+
+    public MyMod() {
+        LOG = LogManager.getLogger(MODID);
+    }
 
     @Mod.EventHandler
     // preInit "Run before anything else. Read your config, create blocks, items, etc, and register them with the
@@ -50,7 +57,9 @@ public class MyMod {
     }
 
     private void addRecipes() {
-        GameRegistry.addShapelessRecipe(new ItemStack(ModItems.kacperek),
-            OreDictionary.getOres("gemDiamond").get(0));
+        GameRegistry.addShapelessRecipe(
+            new ItemStack(ModItems.kacperek),
+            OreDictionary.getOres("gemDiamond")
+                .get(0));
     }
 }

@@ -8,6 +8,8 @@ public class Config {
 
     public static String greeting = "Hello World";
 
+    public Config() {}
+
     public static void synchronizeConfiguration(File configFile) {
         Configuration configuration = new Configuration(configFile);
 

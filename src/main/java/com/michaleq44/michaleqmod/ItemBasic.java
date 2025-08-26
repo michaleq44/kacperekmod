@@ -4,7 +4,10 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
-public class ItemBasic  extends Item {
+public class ItemBasic extends Item {
+
+    public ItemBasic() {}
+
     public ItemBasic(String unlocalizedName) {
         super();
         this.setUnlocalizedName(unlocalizedName);
