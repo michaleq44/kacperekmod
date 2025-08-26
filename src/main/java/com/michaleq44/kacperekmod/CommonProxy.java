@@ -1,4 +1,4 @@
-package com.michaleq44.michaleqmod;
+package com.michaleq44.kacperekmod;
 
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;

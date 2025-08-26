@@ -1,4 +1,4 @@
-package com.michaleq44.michaleqmod;
+package com.michaleq44.kacperekmod;
 
 import net.minecraft.item.Item;
 import net.minecraft.util.EnumChatFormatting;
@@ -12,7 +12,7 @@ public class ModItems {
     public ModItems() {}
 
     public static void init() {
-        kacperek = new ItemConsumableMessage("kacperek", "kacperek = -4/3", EnumChatFormatting.GOLD);
+        kacperek = new ItemRightClickMessage("kacperek", "kacperek = -4/3", EnumChatFormatting.GOLD);
 
         GameRegistry.registerItem(kacperek, "kacperek");
     }

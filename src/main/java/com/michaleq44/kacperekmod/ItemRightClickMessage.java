@@ -1,4 +1,4 @@
-package com.michaleq44.michaleqmod;
+package com.michaleq44.kacperekmod;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
@@ -7,12 +7,12 @@ import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.FakePlayer;
 
-public class ItemConsumableMessage extends ItemBasic {
+public class ItemRightClickMessage extends ItemBasic {
 
     private final String message;
     private final EnumChatFormatting color;
 
-    public ItemConsumableMessage(String unlocalizedName, String message, EnumChatFormatting color) {
+    public ItemRightClickMessage(String unlocalizedName, String message, EnumChatFormatting color) {
         super(unlocalizedName);
         this.setMaxStackSize(43);
         this.message = message;

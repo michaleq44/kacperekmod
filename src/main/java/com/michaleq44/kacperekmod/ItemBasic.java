@@ -1,4 +1,4 @@
-package com.michaleq44.michaleqmod;
+package com.michaleq44.kacperekmod;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
@@ -11,7 +11,7 @@ public class ItemBasic extends Item {
     public ItemBasic(String unlocalizedName) {
         super();
         this.setUnlocalizedName(unlocalizedName);
-        this.setTextureName("michaleqmod:" + unlocalizedName);
+        this.setTextureName("kacperekmod:" + unlocalizedName);
         this.setCreativeTab(CreativeTabs.tabMisc);
     }
 

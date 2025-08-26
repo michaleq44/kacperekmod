@@ -1,0 +1,25 @@
+package com.michaleq44.kacperekmod;
+
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
+import net.minecraft.creativetab.CreativeTabs;
+
+public class BlockBasic extends Block {
+
+    public BlockBasic(String unlocalizedName, Material material, float hardness, float resistance) {
+        super(material);
+        this.setBlockName(unlocalizedName);
+        this.setBlockTextureName("kacperekmod:" + unlocalizedName);
+        this.setCreativeTab(CreativeTabs.tabBlock);
+        this.setHardness(hardness);
+        this.setResistance(resistance);
+    }
+
+    public BlockBasic(String unlocalizedName, float hardness, float resistance) {
+        this(unlocalizedName, Material.rock, hardness, resistance);
+    }
+
+    public BlockBasic(String unlocalizedName) {
+        this(unlocalizedName, Material.rock, 2.0f, 10.0f);
+    }
+}

@@ -3,8 +3,8 @@
 	"modList": [{
 		"modid": "${modId}",
 		"name": "${modName}",
-		"description": "MichaleqMod.",
-		"version": "1.0.0",
+		"description": "A mod that adds kacperek",
+		"version": "${modVersion}",
 		"mcversion": "${minecraftVersion}",
 		"url": "https://github.com/michaleq44",
 		"updateUrl": "",

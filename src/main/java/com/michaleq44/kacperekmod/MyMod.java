@@ -1,4 +1,4 @@
-package com.michaleq44.michaleqmod;
+package com.michaleq44.kacperekmod;
 
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
@@ -14,15 +14,15 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.event.FMLServerStartingEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 
-@Mod(modid = MyMod.MODID, version = Tags.VERSION, name = "MichaleqMod", acceptedMinecraftVersions = "[1.7.10]")
+@Mod(modid = MyMod.MODID, version = Tags.VERSION, name = "Kacperek Mod", acceptedMinecraftVersions = "[1.7.10]")
 public class MyMod {
 
-    public static final String MODID = "michaleqmod";
+    public static final String MODID = "kacperekmod";
     public static Logger LOG = null;
 
     @SidedProxy(
-        clientSide = "com.michaleq44.michaleqmod.ClientProxy",
-        serverSide = "com.michaleq44.michaleqmod.CommonProxy")
+        clientSide = "com.michaleq44.kacperekmod.ClientProxy",
+        serverSide = "com.michaleq44.kacperekmod.CommonProxy")
     public static CommonProxy proxy;
 
     public MyMod() {
@@ -34,7 +34,9 @@ public class MyMod {
     // GameRegistry." (Remove if not needed)
     public void preInit(FMLPreInitializationEvent event) {
         proxy.preInit(event);
+        ModSounds.registerSounds();
         ModItems.init();
+        ModBlocks.init();
     }
 
     @Mod.EventHandler
@@ -57,9 +59,15 @@ public class MyMod {
     }
 
     private void addRecipes() {
+        // kacperek
         GameRegistry.addShapelessRecipe(
             new ItemStack(ModItems.kacperek),
             OreDictionary.getOres("gemDiamond")
                 .get(0));
+
+        GameRegistry.addShapelessRecipe(new ItemStack(ModItems.kacperek, 9), ModBlocks.kacperekblock);
+
+        // kacperek_block
+        GameRegistry.addRecipe(new ItemStack(ModBlocks.kacperekblock, 1), "XXX", "XXX", "XXX", 'X', ModItems.kacperek);
     }
 }
