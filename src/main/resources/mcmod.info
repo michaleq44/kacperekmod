@@ -6,7 +6,7 @@
 		"description": "A mod that adds kacperek",
 		"version": "${modVersion}",
 		"mcversion": "${minecraftVersion}",
-		"url": "https://github.com/michaleq44",
+		"url": "https://github.com/michaleq44/kacperekmod",
 		"updateUrl": "",
 		"authorList": ["michaleq44"],
 		"credits": "",
